@@ -1,0 +1,22 @@
+<div>
+	<h1>Subjects </h1>
+
+<table summary="Subject List">
+<tr>
+	<th>Subject</th>
+	<th>Visible</th>
+	<th>Pages</th>
+	<th>Actions</th>
+</tr>
+<% @subjects.each do |subject| %>
+<!-- <tr>
+	<td><%= subject.position %> </td>
+	<td><%= subject.name %></td>
+	<td><%= subject.visible %></td>
+</tr>	 -->
+<%= render(:partial => "form", :locals =>{:subject => subject}) %>
+<%end%>
+</table>
+	
+
+</div>
